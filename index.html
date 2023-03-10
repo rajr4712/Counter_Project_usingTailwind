@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--Tailwindd css property use k liye its script copy form tailwind website in menu play cdn-->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    
+    <!-- wrapper -->
+    <!--this is big wrapper jiska width and height full hai screen k size ka iske under heading wala nd
+    + icon ,value 0 and - icon all pada hai jo ye both ek k niche ek hai so use flex bana k flex-col , content in center-->
+    <div class="w-[100vw] h-[100vh] flex flex-col items-center justify-center bg-[#344151]">
+        
+     <!--heading Text container div-->
+    <div class="text-[#0398d4] font-medium text-[20px]">Increment And Decrement</div> <!--text-[#0398d4] is text color and text-[20px] is text size given by designer-->
+
+        <!--secondary wrapper-->
+        <!--this div jiske under + div , value wala div and - icon wala div pada hai, rounded-sm coz border thoda round hai, flex row use coz all horizontally hai-->
+        <div class="bg-white flex flex-row text-[25px] text-[#344151] rounded-sm gap-12 p-3 px-5">
+
+        <!-- negative buttton div -->
+         <!--button on click pe decreament function jiski code index.js me likhi hui hai jo click par value subtarct kr k deta hai-->
+            <button onclick="decrement()" class="border-r-2 border-[#bfbfbf] pr-5">  <!--border-r-2: border right me 2px ka hai , uske bagal me border color define-->
+                <i class="fa-solid fa-minus"></i>                   <!--this is font icon wch copy from fontawesome website-->
+            </button>
+
+        <!--Value wala Div(wch contain 0 value intially)-->
+            <div id="counter" class="font-bold">0</div>
+
+         <!-- positive button -->
+            <button onclick="increment()" class="border-l-2 border-[#bfbfbf] pl-5">  <!--botder-l-2 :border left me 2px ka hai-->
+                <i class="fa-solid fa-plus"></i>
+            </button>
+
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
